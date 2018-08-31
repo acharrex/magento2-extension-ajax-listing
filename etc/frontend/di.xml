@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shopigo. All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Category\View">
+        <plugin name="shopigo_catalogajaxlisting_catalog_category_view" type="Shopigo\CatalogAjaxListing\Plugin\Catalog\Category\View\ProductListingPlugin" sortOrder="10"/>
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Advanced\Result">
+        <plugin name="shopigo_catalogajaxlisting_catalogsearch_advanced_result" type="Shopigo\CatalogAjaxListing\Plugin\Catalogsearch\Advanced\Result\ProductListingPlugin" sortOrder="10"/>
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Result\Index">
+        <plugin name="shopigo_catalogajaxlisting_catalogsearch_result_index" type="Shopigo\CatalogAjaxListing\Plugin\Catalogsearch\Result\Index\ProductListingPlugin" sortOrder="10"/>
+    </type>
+</config>
