@@ -2,11 +2,24 @@
 
 # Magento 2 AJAX Listing extension by [Shopigo](https://www.shopigo.ch)
 
-DESCRIPTION
+This extension allows to get the content of any product listing (category page or search results) in JSON format.
 
-BLOG LINK
+Example:
 
-SCREENSHOT
+https://[mymagentostore]/women.html?p=2&ajax=1
+
+```json
+{
+    "success": true,
+    "current_page_url": "https:\/\/[mymagentostore]\/women.html?p=2",
+    "previous_page_url": "https:\/\/[mymagentostore]\/women.html",
+    "next_page_url": "https:\/\/[mymagentostore]\/women.html?p=3",
+    "html": {
+        "content": "[html_content]",
+        "sidebar_main": "[html_content]",
+    }
+}
+```
 
 ## Requirements
 
@@ -17,7 +30,7 @@ Magento Open Source Edition 2.2.x.
 ## Method 1 - Installing via composer
 
 - Switch to your Magento project root
-- Run `composer require shopigo/magento2-extension-ajax-listing=dev-master`
+- Run `composer require shopigo/magento2-extension-ajax-listing`
 
 ## Method 2 - Installing using archive
 
@@ -39,7 +52,27 @@ php bin/magento setup:static-content:deploy
 
 ## How to use it
 
-TODO
+- On any product listing (category page or search results), add a parameter "ajax=1" to the URL
+
+## Response
+
+### Success
+
+| Field | Format | Description | Example |
+|-------|--------|-------------|---------|
+| success | boolean | Response state. Set to `true` in case of success. | `true` |
+| current_page_url | string | Current page URL | https://[mymagentostore]/women.html?p=3 |
+| previous_page_url | string | Previous page URL (if existing) | https://[mymagentostore]/women.html?p=2 | 
+| next_page_url | string | Next page URL (if existing) | https://[mymagentostore]/women.html?p=4 |
+| html[content] | string | HTML content of the products list | - |
+| html[sidebar_main] | string | HTML content of the main sidebar | - |
+
+### Error
+
+| Field | Format | Description | Example |
+|-------|--------|-------------|---------|
+| success | boolean | Response state. Set to `false` in case of error. | `false` |
+| error_message | string | Error message | Unable to load block content. |
 
 ## Support
 
@@ -49,9 +82,14 @@ If you have any issues, open a bug report in GitHub's [issue tracker](https://gi
 
 Please contact us to get a quote https://www.shopigo.ch/contact
 
+## Change logs
+
+**Version 1.0.0** (2018-10-09)
+- First version
+
 ## License
 
 The code is licensed under [Open Software License ("OSL") v. 3.0](http://opensource.org/licenses/osl-3.0.php).
 
-Enjoy!<br/>
+<br/>Enjoy!<br/>
 [Shopigo](https://www.shopigo.ch)
