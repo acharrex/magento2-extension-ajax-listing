@@ -78,10 +78,6 @@ php bin/magento setup:static-content:deploy
 
 If you have any issues, open a bug report in GitHub's [issue tracker](https://github.com/shopigo/magento2-extension-ajax-listing/issues).
 
-## Need more features?
-
-Please contact us to get a quote https://www.shopigo.ch/contact
-
 ## Change logs
 
 **Version 1.0.0** (2018-10-09)
