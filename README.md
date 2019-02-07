@@ -1,6 +1,6 @@
-[![Shopigo](https://www.shopigo.ch/wp-content/uploads/2018/08/github-shopigo-logo.png)](https://www.shopigo.ch)
+![Shopigo](https://i.imgur.com/7Ctkn7X.png)
 
-# Magento 2 AJAX Listing extension by [Shopigo](https://www.shopigo.ch)
+# Magento 2 AJAX Listing extension by Shopigo
 
 This extension allows to get the content of any product listing (category page or search results) in JSON format.
 
@@ -23,7 +23,7 @@ https://[mymagentostore]/women.html?p=2&ajax=1
 
 ## Requirements
 
-Magento Open Source Edition 2.2.x.
+Magento Open Source Edition 2.2 or 2.3
 
 ## Installation
 
@@ -34,7 +34,7 @@ Magento Open Source Edition 2.2.x.
 
 ## Method 2 - Installing using archive
 
-- Download [ZIP Archive](https://github.com/shopigo/magento2-extension-ajax-listing/archive/master.zip)
+- Download [ZIP Archive](https://github.com/acharrex/magento2-extension-ajax-listing/archive/master.zip)
 - Switch to your Magento project root
 - Create folder `app/code/Shopigo/CatalogAjaxListing`
 - Extract zip into path
@@ -76,9 +76,12 @@ php bin/magento setup:static-content:deploy
 
 ## Support
 
-If you have any issues, open a bug report in GitHub's [issue tracker](https://github.com/shopigo/magento2-extension-ajax-listing/issues).
+If you have any issues, open a bug report in GitHub's [issue tracker](https://github.com/acharrex/magento2-extension-ajax-listing/issues).
 
 ## Change logs
+
+**Version 1.0.1** (2019-02-07)
+- Fix composer.json for Magento 2.3
 
 **Version 1.0.0** (2018-10-09)
 - First version
@@ -87,5 +90,4 @@ If you have any issues, open a bug report in GitHub's [issue tracker](https://gi
 
 The code is licensed under [Open Software License ("OSL") v. 3.0](http://opensource.org/licenses/osl-3.0.php).
 
-<br/>Enjoy!<br/>
-[Shopigo](https://www.shopigo.ch)
+<br/>Enjoy!
